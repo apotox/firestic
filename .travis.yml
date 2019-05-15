@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - node
+cache:
+  directories:
+  - node_modules
 script:
 - 
 deploy:
@@ -10,5 +13,4 @@ deploy:
 before_script:
   - "npm i -g gatsby"
   - "npm i"
-after_script:
-  - "npm run deploy"
+  - "npm run build"
